@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   const conversion = () => {
     if (typeof window !== 'undefined' && (window as any).dataLayer) {
-      (window as any).dataLayer.push({ event: 'conversion', conversionId: 'AW-11185102926', conversionLabel: '_kmiCIK8p_0YEM7AvNUp' })
+      (window as any).dataLayer.push({ event: 'conversion', eventModel: { conversionId: 'AW-11185102926', conversionLabel: '_kmiCIK8p_0YEM7AvNUp' } })
     }
   }
   return (
