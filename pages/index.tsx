@@ -2,11 +2,31 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
+  // Define the type for the dataLayer arguments
+  type DataLayerObject = {
+    // Define the properties of the objects you expect to push to the dataLayer
+    event?: string;
+    // ... other properties
+  };
+  
+  // Assume dataLayer is globally available
+  declare global {
+    interface Window { dataLayer: DataLayerObject[]; }
+  }
 
 export default function Home() {
+
+// The gtag function with TypeScript
+const gtag = (...args: DataLayerObject[]) => {
+  if (typeof window !== 'undefined') {
+      window.dataLayer.push(...args);
+  }
+};
   const conversion = () => {
     if (typeof window !== 'undefined' && (window as any).dataLayer) {
-      (window as any).dataLayer.push({ event: 'conversion', eventModel: { send_to: 'AW-11185102926/_kmiCIK8p_0YEM7AvNUp' } })
+      (window as any).gtag('event', 'conversion', {
+        'send_to': 'AW-11185102926/_kmiCIK8p_0YEM7AvNUp'
+      });
     }
   }
   return (
