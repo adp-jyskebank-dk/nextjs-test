@@ -12,9 +12,6 @@ export const GtagScript: React.FunctionComponent = () => {
                 gtag('js', new Date());
         
                 gtag('config', 'AW-11185102926');
-                gtag('event', 'conversion', {
-                    'send_to': 'AW-11185102926/_kmiCIK8p_0YEM7AvNUp',
-                  });
                 `}
             </Script>
         </>
