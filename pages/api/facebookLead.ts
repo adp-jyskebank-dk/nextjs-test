@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 
 const VERIFY_TOKEN = 'Clr1eJxsX5PbRmaTkHM6bIPeSJDJItjBaSc0TJ6lrlxJw'
-const FACEBOOK_PAGE_ACCESS_TOKEN = 'token'
+const FACEBOOK_PAGE_ACCESS_TOKEN = 'EAAQtHZCtNKZBIBO6XMdl61yLY2OJ3DPRyge1fnjxlaNXyOst58GsPZAkk64x4ahlAGEXZCJK1WtjfZCrU5RqA6wZBXRLbWaFBfqgOpWhNMPK74A02Vo3y6exYEsBUrEuaTWg6brnF66g9ZC2ZCnzxYuyOrVZBFek6HJDhMsgLQsarwDm3kd4DU8Qp4P1tyX4udHWAOaPdKb5L1athdKBZBQtmAWc7PaZC9ZA9NXcPNbgPUOx'
 
 export default async function handler(
   req: NextApiRequest,
